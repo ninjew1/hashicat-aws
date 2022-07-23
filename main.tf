@@ -1,14 +1,16 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "=3.42.0"
-    }
+      required_providers {
+         aws = {
+         source = "hashicorp/aws"
+         version = "= 3.74.2"
+        
+        }
+     }
   }
-}
 
 provider "aws" {
-  region  = var.region
+  region = var.region
+ # var.region = "us-west-1"
 }
 
 resource "aws_vpc" "hashicat" {
